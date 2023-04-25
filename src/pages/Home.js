@@ -3,12 +3,14 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import "../styles/pages/Error404.css";
+import Gallery from "../components/Gallery";
 
 function Home() {
   return (
     <div>
       <Header />
       <Banner />
+      <Gallery />
       <Footer />
     </div>
   );
