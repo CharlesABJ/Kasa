@@ -1,11 +1,14 @@
 import React from "react";
 import Card from "./Card";
+import { logementList } from "../datas/logementList";
 import "../styles/components/Gallery.css";
 
 function Gallery() {
   return (
-    <div className="gallery-zone">
-      <Card />
+    <div className="gallery">
+      {logementList.map((e) => (
+        <Card key={e.id} title={e.title} cover={e.cover} />
+      ))}
     </div>
   );
 }

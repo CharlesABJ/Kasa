@@ -9,7 +9,10 @@ function Home() {
   return (
     <div>
       <Header />
-      <Banner />
+      <Banner
+        imgSrc="./assets/banner-home.png"
+        title="Chez vous, partout et ailleurs"
+      />
       <Gallery />
       <Footer />
     </div>
