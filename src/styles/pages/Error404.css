@@ -1,29 +1,25 @@
-.error-page {
-    background-color: #f8f8f8;
-    font-family: Monserrat, sans-serif;
-    font-size: 16px;
-    color: #FF6060;
+.error404 {
     text-align: center;
-    padding: 100px 0;
+    color: #FF6060;
+    padding-bottom: 10px;
 }
 
-.error-page h1 {
-    font-size: 72px;
-    margin-bottom: 10px;
+.error404 h1 {
+    font-size: 260px;
+    padding: 20px 0 10px;
 }
 
-.error-page p {
+.error404 p {
     font-size: 24px;
-    margin-bottom: 30px;
-    text-decoration: underline;
+    padding-bottom: 100px;
 }
 
-.error-page a {
+.error404 a span {
     text-decoration: underline;
     color: #FF6060;
-    padding-bottom: 2px;
 }
 
-.error-page a:hover {
+.error404 a span:hover {
     color: #ffa5a5;
+    transition: 0.3s all;
 }
