@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/components/DropDown.css";
 import ArrowDropDown from "./ArrowDropDown";
 function DropDown(props) {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(props.openByDefault);
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
