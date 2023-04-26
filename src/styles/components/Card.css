@@ -3,6 +3,8 @@
     width: 340px;
     cursor: pointer;
     position: relative;
+    background-image: linear-gradient(to bottom, #FF6060, #9C4343);
+    border-radius: 10px;
 }
 
 .card img {
@@ -10,11 +12,16 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    visibility: hidden;
+}
+
+.card img.card-hovered {
+    visibility: visible;
 }
 
 .card span {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 13px;
+    left: 13px;
     color: #fff;
 }
