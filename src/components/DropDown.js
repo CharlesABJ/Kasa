@@ -8,16 +8,19 @@ function DropDown(props) {
     setIsClicked(!isClicked);
   };
   return (
-    <div>
-      <li onClick={handleClick} className="drop-down">
-        {props.label}
-        <ArrowDropDown
-          className={isClicked ? "drop" : null}
-          src="./assets/arrow-drop.png"
-          alt={isClicked ? "élément ouvert" : "élement fermé"}
-        />
-      </li>
-    </div>
+    <li>
+      <div>
+        <p onClick={handleClick} className="drop-down">
+          {props.label}
+          <ArrowDropDown
+            className={isClicked ? "drop" : null}
+            src="./assets/arrow-drop.png"
+            alt={isClicked ? "élément ouvert" : "élement fermé"}
+          />
+        </p>
+        <p className="description">{props.description}</p>
+      </div>
+    </li>
   );
 }
 
