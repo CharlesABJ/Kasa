@@ -7,17 +7,20 @@
     border-radius: 10px;
 }
 
+.card:hover img {
+    opacity: 1;
+    transition: 0.3s all;
+}
+
 .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s all;
 }
 
-.card img.card-hovered {
-    visibility: visible;
-}
 
 .card span {
     position: absolute;
