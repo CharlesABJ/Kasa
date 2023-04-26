@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
+import DropDownZone from "../components/DropDownZone";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -8,12 +9,7 @@ function About() {
     <div>
       <Header />
       <Banner imgSrc="./assets/banner-about.png" />
-      <ul>
-        <li>Fiabilité</li>
-        <li>Respect</li>
-        <li>Service</li>
-        <li>Sécurité</li>
-      </ul>
+      <DropDownZone />
       <Footer />
     </div>
   );

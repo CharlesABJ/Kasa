@@ -1,0 +1,8 @@
+.drop-down img {
+    width: 20px;
+    height: 10px;
+}
+
+.drop-down .drop {
+    transform: rotate(180deg);
+}
