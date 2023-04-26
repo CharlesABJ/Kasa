@@ -1,0 +1,9 @@
+.logement-banner {
+    margin-inline: 40px;
+}
+
+.logement-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

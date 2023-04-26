@@ -1,0 +1,6 @@
+.logement-host span {
+    display: flex;
+    color: #FF6060;
+    font-size: 18px;
+    width: 90px;
+}

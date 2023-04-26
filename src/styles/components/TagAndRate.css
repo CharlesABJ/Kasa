@@ -1,0 +1,5 @@
+.tag-and-rate-zone {
+    padding-inline: 40px;
+    display: flex;
+    justify-content: space-between;
+}
