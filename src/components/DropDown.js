@@ -18,7 +18,9 @@ function DropDown(props) {
             alt={isClicked ? "élément ouvert" : "élement fermé"}
           />
         </p>
-        <p className="description">{props.description}</p>
+        <p className={`description ${isClicked ? "" : "closed"}`}>
+          {props.description}
+        </p>
       </div>
     </li>
   );
