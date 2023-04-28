@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
-import DropDownZone from "../components/DropDownZone";
+import CollapseZone from "../components/CollapseZone";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -9,7 +9,7 @@ function About() {
     <div>
       <Header />
       <Banner imgSrc="./assets/banner-about.png" />
-      <DropDownZone />
+      <CollapseZone />
       <Footer />
     </div>
   );

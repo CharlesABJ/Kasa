@@ -4,7 +4,6 @@ function LogementBanner(props) {
   return (
     <div className="logement-banner">
       <img src={props.imgSrc} alt={props.title} />
-      Bannière
     </div>
   );
 }

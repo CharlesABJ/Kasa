@@ -1,0 +1,20 @@
+.title-and-host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 40px;
+}
+
+.tag-and-rate-zone {
+    padding-inline: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.description-zone {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0 40px;
+}

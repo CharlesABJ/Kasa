@@ -1,9 +1,9 @@
 import { useState } from "react";
 import React from "react";
-import "../styles/components/DropDown.css";
-import ArrowDropDown from "./ArrowDropDown";
-function DropDown(props) {
-  const [isClicked, setIsClicked] = useState(props.openByDefault);
+import "../styles/components/Collapse.css";
+import ArrowCollapse from "./ArrowCollapse";
+function Collapse(props) {
+  const [isClicked, setIsClicked] = useState(false);
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
@@ -12,7 +12,7 @@ function DropDown(props) {
       <div>
         <p onClick={handleClick} className="drop-down">
           {props.label}
-          <ArrowDropDown
+          <ArrowCollapse
             className={isClicked ? "drop" : null}
             src="./assets/arrow-drop.png"
             alt={isClicked ? "élément ouvert" : "élement fermé"}
@@ -26,4 +26,4 @@ function DropDown(props) {
   );
 }
 
-export default DropDown;
+export default Collapse;

@@ -1,18 +1,30 @@
 import React from "react";
-import DescriptionZone from "../components/DescriptionZone";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LogementBanner from "../components/LogementBanner";
-import TagAndRate from "../components/TagAndRate";
-import TitleAndHost from "../components/TitleAndHost";
+import LogementTitle from "../components/LogementTitle";
+import LogementHost from "../components/LogementHost";
+import Tag from "../components/Tag";
+import Rate from "../components/Rate";
+import Collapse from "../components/Collapse";
+import "../styles/pages/LogementProfile.css";
 function LogementProfile() {
   return (
     <div>
       <Header />
-      <LogementBanner />
-      <TitleAndHost />
-      <TagAndRate />
-      <DescriptionZone />
+      <LogementBanner imgSrc={""} title="Bannière" />
+      <div className="title-and-host">
+        <LogementTitle title="Titre" location="Localisation" />
+        <LogementHost hostPicture={""} hostName="Nom" />
+      </div>
+      <div className="tag-and-rate-zone">
+        <Tag tag="tag" />
+        <Rate color="colored" />
+      </div>
+      <div className="description-zone">
+        <Collapse label="test" description="testeur" openByDefault="true" />
+        <Collapse label="test" description="testeur" openByDefault="true" />
+      </div>
       <Footer />
     </div>
   );

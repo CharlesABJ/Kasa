@@ -3,7 +3,7 @@ import "../styles/components/LogementHost.css";
 function LogementHost(props) {
   return (
     <div className="logement-host">
-      <span>{props.hostName}nom</span>
+      <span>{props.hostName}</span>
       <img src={props.hostPicture} alt={`portrait de ${props.hostName}`} />
     </div>
   );
