@@ -5,6 +5,13 @@
     position: relative;
     /* background-image: linear-gradient(to bottom, #FF6060, #9C4343); */
     border-radius: 10px;
+    transition: 0.5s all;
+}
+
+
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.5s all;
 }
 
 /* .card:hover img {

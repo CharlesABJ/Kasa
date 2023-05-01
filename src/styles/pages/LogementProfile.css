@@ -6,15 +6,37 @@
 }
 
 .tag-and-rate-zone {
-    padding-inline: 40px;
+    margin: 15px 40px 0;
     display: flex;
     justify-content: space-between;
+}
+
+.tag-zone {
+    display: flex;
+}
+
+.rate-zone {
+    display: flex;
 }
 
 .description-zone {
     width: 100%;
     display: flex;
-    list-style: none;
     justify-content: space-between;
     padding: 0 40px;
+}
+
+.description-zone li {
+    width: 48%;
+    list-style: none;
+}
+
+.description-zone li div .description {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.description-zone li div .description span {
+    width: 100%;
 }

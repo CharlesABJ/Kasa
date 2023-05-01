@@ -7,7 +7,7 @@ function Header() {
       <nav>
         <div className="logo">
           <NavLink to="/">
-            <img src="./assets/logo.svg" alt="Logo Kasa" />
+            <img src="/assets/logo.svg" alt="Logo Kasa" />
           </NavLink>
         </div>
         <ul>
