@@ -8,7 +8,7 @@ function LogementBanner(props) {
     alert("Banniere suivante");
   };
   const handleClickPreviewBanner = () => {
-    alert("Banniere précédente");
+    console.log("Banniere précédente");
   };
   return (
     <div className="logement-banner">
