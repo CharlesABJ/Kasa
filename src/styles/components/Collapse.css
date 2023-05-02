@@ -26,3 +26,16 @@
 .description.closed {
     display: none !important;
 }
+
+@media screen and (max-width:1000px) {
+
+    .drop-down {
+        font-size: 3vw;
+        margin-top: 15px;
+    }
+
+    .description {
+        font-size: 2.5vw;
+        padding-top: 2.5vw
+    }
+}

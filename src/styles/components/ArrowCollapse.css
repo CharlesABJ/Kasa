@@ -8,3 +8,11 @@
     transform: rotate(180deg);
     transition: 0.3s all;
 }
+
+
+@media screen and (max-width:1000px) {
+    .drop-down img {
+        width: 3vw;
+        height: 2vw;
+    }
+}
