@@ -1,6 +1,5 @@
 .card {
     height: 340px;
-    width: 340px;
     cursor: pointer;
     position: relative;
     /* background-image: linear-gradient(to bottom, #FF6060, #9C4343); */
@@ -34,4 +33,13 @@
     bottom: 13px;
     left: 13px;
     color: #fff;
+}
+
+
+
+@media screen and (max-width:1000px) {
+
+    .card {
+        max-height: 255px;
+    }
 }
