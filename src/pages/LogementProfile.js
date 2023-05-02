@@ -19,6 +19,7 @@ function LogementProfile() {
   if (!logement) {
     return <Error404 />;
   }
+
   return (
     <div>
       <Header />
