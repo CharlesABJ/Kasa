@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LogementBanner from "../components/LogementBanner";
@@ -11,21 +11,58 @@ import "../styles/pages/LogementProfile.css";
 import { logementList } from "../datas/logementList";
 import { useParams } from "react-router-dom";
 import Error404 from "./Error404";
-
+import ArrowBanner from "../components/ArrowBanner";
 function LogementProfile() {
   const { id } = useParams();
   const rates = [1, 2, 3, 4, 5];
+  const [activeBanner, setActiveBanner] = useState(0);
+
   const logement = logementList.find((logement) => logement.id === id);
   if (!logement) {
     return <Error404 />;
   }
 
+  const handleClickNextBanner = () => {
+    if (activeBanner === logement.pictures.length - 1) {
+      setActiveBanner(0);
+    } else {
+      setActiveBanner(activeBanner + 1);
+    }
+  };
+  const handleClickPreviewBanner = () => {
+    if (activeBanner === 0) {
+      setActiveBanner(logement.pictures.length - 1);
+    } else {
+      setActiveBanner(activeBanner - 1);
+    }
+  };
+
   return (
     <div>
       <Header />
-      {logement.pictures.map((e, index) => (
-        <LogementBanner key={index} imgSrc={e} title="Bannière" />
-      ))}
+      <div className="logement-banner">
+        <div className="arrows-banner-zone">
+          <ArrowBanner
+            onClick={handleClickPreviewBanner}
+            className="arrow-banner arrow-left fa-solid fa-chevron-up  "
+          />
+          <ArrowBanner
+            onClick={handleClickNextBanner}
+            className="arrow-banner fa-solid fa-chevron-up"
+          />
+        </div>
+
+        {logement.pictures.map((e, index) => (
+          <LogementBanner
+            className={`img-banner ${
+              index === activeBanner ? "active-banner" : ""
+            }`}
+            key={index}
+            imgSrc={e}
+            title="Bannière"
+          />
+        ))}
+      </div>
       <div className="description-zone">
         <div className="logement-title-and-description">
           <LogementTitle title={logement.title} location={logement.location} />{" "}

@@ -9,24 +9,13 @@
     height: 100%;
     border-radius: 25px;
     object-fit: cover;
-    /* display: none; */
+    display: none;
 }
 
 .logement-banner .img-banner.active-banner {
     display: block;
 }
 
-
-.logement-banner .arrows-banner-zone img {
-    position: absolute;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.logement-banner .arrows-banner-zone .arrow-left {
-    left: 25px;
-}
 
 
 
@@ -36,13 +25,6 @@
         margin-inline: 20px;
     }
 
-    .logement-banner .arrows-banner-zone img {
-        right: 2vw;
-    }
-
-    .logement-banner .arrows-banner-zone .arrow-left {
-        left: 2vw;
-    }
 }
 
 @media screen and (max-width:740px) {

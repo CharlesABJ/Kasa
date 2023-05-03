@@ -2,13 +2,7 @@ import React from "react";
 import "../styles/components/ArrowBanner.css";
 
 function ArrowBanner(props) {
-  return (
-    <img
-      className={props.className}
-      src="/assets/banner-arrow.png"
-      alt={props.alt}
-    />
-  );
+  return <i onClick={props.onClick} className={props.className}></i>;
 }
 
 export default ArrowBanner;

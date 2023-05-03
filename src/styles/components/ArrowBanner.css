@@ -1,11 +1,21 @@
 .arrow-banner {
-    width: 47px;
+    position: absolute;
+    font-size: 60px;
     cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    right: 2.5vw;
+    color: #fff;
+    transition: 0.3s all;
 }
 
-@media screen and (max-width:1000px) {
+.arrow-banner:hover {
+    transition: 0.3s all;
+    color: #ffdcdc;
+}
 
-    .arrow-banner {
-        width: 3.5vw;
-    }
+.arrow-left {
+    transform: rotate(-90deg);
+    right: 2.5vw;
+    background: red;
 }
