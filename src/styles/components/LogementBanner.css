@@ -27,3 +27,28 @@
 .logement-banner .arrows-banner-zone .arrow-left {
     left: 25px;
 }
+
+
+
+@media screen and (max-width:1000px) {
+
+    .logement-banner {
+        margin-inline: 20px;
+    }
+
+    .logement-banner .arrows-banner-zone img {
+        right: 2vw;
+    }
+
+    .logement-banner .arrows-banner-zone .arrow-left {
+        left: 2vw;
+    }
+}
+
+@media screen and (max-width:740px) {
+
+    .logement-banner {
+        max-height: 255px;
+        height: 50vw;
+    }
+}

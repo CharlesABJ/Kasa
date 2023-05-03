@@ -1,42 +1,78 @@
-.title-and-host {
+.description-zone {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline: 40px;
 }
 
-.tag-and-rate-zone {
-    margin: 15px 40px 0;
+.description-zone .logement-title-and-description {
+    margin: 15px 0 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-.tag-zone {
+.description-zone .logement-title-and-description .tag-zone {
     display: flex;
+    margin: 15px 0 5px;
 }
 
-.rate-zone {
+.description-zone .logement-host-and-rates {
     display: flex;
+    flex-direction: column;
 }
 
-.description-zone {
+.description-zone .logement-host-and-rates .host-zone {
+    margin: 0 0 15px;
+}
+
+.description-zone .logement-host-and-rates .rates-zone {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.collapses {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
 }
 
-.description-zone li {
+.collapses li {
     width: 48%;
     list-style: none;
 }
 
-.description-zone li div .description {
+.collapses li div .description {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-.description-zone li div .description span {
+.collapses li div .description span {
     width: 100%;
+}
+
+
+
+@media screen and (max-width:1000px) {
+
+    .description-zone {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .description-zone .logement-title-and-description {
+        width: 100%;
+    }
+
+    .description-zone .logement-host-and-rates {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .collapses {
+        padding: 0 20px;
+    }
 }

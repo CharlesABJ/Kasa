@@ -2,3 +2,10 @@
     width: 47px;
     cursor: pointer;
 }
+
+@media screen and (max-width:1000px) {
+
+    .arrow-banner {
+        width: 3.5vw;
+    }
+}

@@ -26,30 +26,33 @@ function LogementProfile() {
       {logement.pictures.map((e, index) => (
         <LogementBanner key={index} imgSrc={e} title="Bannière" />
       ))}
-
-      <div className="title-and-host">
-        <LogementTitle title={logement.title} location={logement.location} />
-        <LogementHost
-          hostPicture={logement.host.picture}
-          hostName={logement.host.name}
-        />
-      </div>
-      <div className="tag-and-rate-zone">
-        <div className="tag-zone">
-          {logement.tags.map((e, index) => (
-            <Tag key={index} tag={e} />
-          ))}
-        </div>
-        <div className="rate-zone">
-          {rates.map((e, index) => (
-            <Rate
-              key={index}
-              color={parseInt(logement.rating) >= e ? "colored" : ""}
-            />
-          ))}
-        </div>
-      </div>
       <div className="description-zone">
+        <div className="logement-title-and-description">
+          <LogementTitle title={logement.title} location={logement.location} />{" "}
+          <div className="tag-zone">
+            {logement.tags.map((e, index) => (
+              <Tag key={index} tag={e} />
+            ))}
+          </div>
+        </div>
+        <div className="logement-host-and-rates">
+          <div className="host-zone">
+            <LogementHost
+              hostPicture={logement.host.picture}
+              hostName={logement.host.name}
+            />
+          </div>
+          <div className="rates-zone">
+            {rates.map((e, index) => (
+              <Rate
+                key={index}
+                color={parseInt(logement.rating) >= e ? "colored" : ""}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="collapses">
         <Collapse
           label="Description"
           description={logement.description}
