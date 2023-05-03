@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LogementBanner from "../components/LogementBanner";
@@ -15,20 +15,17 @@ import ArrowBanner from "../components/ArrowBanner";
 function LogementProfile() {
   const { id } = useParams();
   const rates = [1, 2, 3, 4, 5];
+  const logement = logementList.find((logement) => logement.id === id);
   const [activeBanner, setActiveBanner] = useState(0);
 
-  const logement = logementList.find((logement) => logement.id === id);
-  if (!logement) {
-    return <Error404 />;
-  }
-
-  const handleClickNextBanner = () => {
+  const handleClickNextBanner = useCallback(() => {
     if (activeBanner === logement.pictures.length - 1) {
       setActiveBanner(0);
     } else {
       setActiveBanner(activeBanner + 1);
     }
-  };
+  }, [activeBanner, logement.pictures.length]);
+
   const handleClickPreviewBanner = () => {
     if (activeBanner === 0) {
       setActiveBanner(logement.pictures.length - 1);
@@ -37,6 +34,14 @@ function LogementProfile() {
     }
   };
 
+  useEffect(() => {
+    const interval = setInterval(handleClickNextBanner, 5000);
+    return () => clearInterval(interval);
+  }, [handleClickNextBanner]);
+
+  if (!logement) {
+    return <Error404 />;
+  }
   return (
     <div>
       <Header />
@@ -44,11 +49,11 @@ function LogementProfile() {
         <div className="arrows-banner-zone">
           <ArrowBanner
             onClick={handleClickPreviewBanner}
-            className="arrow-banner arrow-left fa-solid fa-chevron-up  "
+            className="arrow-left fa-solid fa-chevron-up  "
           />
           <ArrowBanner
             onClick={handleClickNextBanner}
-            className="arrow-banner fa-solid fa-chevron-up"
+            className="arrow-right fa-solid fa-chevron-up"
           />
         </div>
 

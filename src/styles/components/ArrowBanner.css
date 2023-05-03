@@ -1,21 +1,27 @@
-.arrow-banner {
+.arrow-left,
+.arrow-right {
     position: absolute;
     font-size: 60px;
     cursor: pointer;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg);
-    right: 2.5vw;
-    color: #fff;
+    transform: rotate(90deg);
+    color: #ffffffc5;
     transition: 0.3s all;
-}
-
-.arrow-banner:hover {
-    transition: 0.3s all;
-    color: #ffdcdc;
+    z-index: 3;
 }
 
 .arrow-left {
+    left: 25px;
     transform: rotate(-90deg);
-    right: 2.5vw;
-    background: red;
+}
+
+.arrow-right {
+    right: 25px;
+    transform: rotate(90deg);
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    transition: 0.3s all;
+    color: #fff;
 }
