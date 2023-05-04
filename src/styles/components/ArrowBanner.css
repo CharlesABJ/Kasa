@@ -1,23 +1,22 @@
 .arrow-left,
 .arrow-right {
     position: absolute;
-    font-size: 60px;
+    font-size: 7vw;
     cursor: pointer;
     top: 50%;
-    transform: rotate(90deg);
     color: #ffffffc5;
     transition: 0.3s all;
     z-index: 3;
 }
 
 .arrow-left {
-    left: 25px;
-    transform: rotate(-90deg);
+    left: 2.5vw;
+    transform: translateY(-50%) rotate(-90deg);
 }
 
 .arrow-right {
-    right: 25px;
-    transform: rotate(90deg);
+    right: 2.5vw;
+    transform: translateY(-50%) rotate(90deg);
 }
 
 .arrow-left:hover,
