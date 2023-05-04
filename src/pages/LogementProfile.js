@@ -100,14 +100,14 @@ function LogementProfile() {
         <Collapse
           label="Description"
           description={logement.description}
-          openByDefault="true"
+          openByDefault={true}
         />
         <Collapse
           label="Équipements"
           description={logement.equipments.map((e, index) => (
             <span key={index}>{e}</span>
           ))}
-          openByDefault="true"
+          openByDefault={true}
         />
       </div>
       <Footer />

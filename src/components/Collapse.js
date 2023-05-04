@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/components/Collapse.css";
 import ArrowCollapse from "./ArrowCollapse";
 function Collapse(props) {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(props.openByDefault, false);
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
