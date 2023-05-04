@@ -56,7 +56,6 @@ function LogementProfile() {
             className="arrow-right fa-solid fa-chevron-up"
           />
         </div>
-
         {logement.pictures.map((e, index) => (
           <LogementBanner
             className={`img-banner ${
@@ -67,6 +66,9 @@ function LogementProfile() {
             title="Bannière"
           />
         ))}
+        <span className="counter">{`${activeBanner + 1}/${
+          logement.pictures.length
+        }`}</span>
       </div>
       <div className="description-zone">
         <div className="logement-title-and-description">
