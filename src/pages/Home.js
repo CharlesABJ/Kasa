@@ -10,7 +10,7 @@ function Home() {
     <div>
       <Header />
       <Banner
-        imgSrc="./assets/banner-home.png"
+        imgSrc="/assets/banner-home.png"
         title="Chez vous, partout et ailleurs"
       />
       <Gallery />

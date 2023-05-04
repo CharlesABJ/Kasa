@@ -8,7 +8,7 @@ function About() {
   return (
     <div>
       <Header />
-      <Banner imgSrc="./assets/banner-about.png" />
+      <Banner imgSrc="/assets/banner-about.png" />
       <CollapseZone />
       <Footer />
     </div>

@@ -14,8 +14,8 @@ import Error404 from "./Error404";
 import ArrowBanner from "../components/ArrowBanner";
 function LogementProfile() {
   const { id } = useParams();
-  const rates = [1, 2, 3, 4, 5];
   const logement = logementList.find((logement) => logement.id === id);
+  const rates = [1, 2, 3, 4, 5];
   const [activeBanner, setActiveBanner] = useState(0);
 
   const handleClickNextBanner = useCallback(() => {
@@ -49,11 +49,19 @@ function LogementProfile() {
         <div className="arrows-banner-zone">
           <ArrowBanner
             onClick={handleClickPreviewBanner}
-            className="arrow-left fa-solid fa-chevron-up  "
+            className={
+              logement.pictures.length > 1
+                ? "arrow-left fa-solid fa-chevron-up"
+                : null
+            }
           />
           <ArrowBanner
             onClick={handleClickNextBanner}
-            className="arrow-right fa-solid fa-chevron-up"
+            className={
+              logement.pictures.length > 1
+                ? "arrow-right fa-solid fa-chevron-up"
+                : null
+            }
           />
         </div>
         {logement.pictures.map((e, index) => (
@@ -63,12 +71,14 @@ function LogementProfile() {
             }`}
             key={index}
             imgSrc={e}
-            title="Bannière"
+            title={`${logement.title} - Bannière n°${activeBanner + 1}`}
           />
         ))}
-        <span className="counter">{`${activeBanner + 1}/${
-          logement.pictures.length
-        }`}</span>
+        <span className="counter">
+          {logement.pictures.length > 1
+            ? `${activeBanner + 1}/${logement.pictures.length}`
+            : null}
+        </span>
       </div>
       <div className="description-zone">
         <div className="logement-title-and-description">
