@@ -3,7 +3,7 @@ import "../styles/components/Footer.css";
 function Footer() {
   return (
     <footer>
-      <img src="/assets/logo-footer.png" alt="logo" />
+      <img src="../../assets/logo-footer.png" alt="logo" />
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
   );

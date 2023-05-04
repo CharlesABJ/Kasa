@@ -26,7 +26,7 @@ function LogementProfile() {
     }
   }, [activeBanner, logement.pictures.length]);
 
-  const handleClickPreviewBanner = () => {
+  const handleClickPreviousBanner = () => {
     if (activeBanner === 0) {
       setActiveBanner(logement.pictures.length - 1);
     } else {
@@ -48,7 +48,7 @@ function LogementProfile() {
       <div className="logement-banner">
         <div className="arrows-banner-zone">
           <ArrowBanner
-            onClick={handleClickPreviewBanner}
+            onClick={handleClickPreviousBanner}
             className={
               logement.pictures.length > 1
                 ? "arrow-left fa-solid fa-chevron-up"

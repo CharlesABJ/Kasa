@@ -14,8 +14,8 @@ function Collapse(props) {
           {props.label}
           <ArrowCollapse
             className={isClicked ? "drop" : null}
-            src="/assets/arrow-drop.png"
-            alt={isClicked ? "élément ouvert" : "élement fermé"}
+            src="../../assets/arrow-drop.png"
+            alt={isClicked ? "élément ouvert" : "élément fermé"}
           />
         </p>
         <p className={`description ${isClicked ? "" : "closed"}`}>

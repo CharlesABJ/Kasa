@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import "../styles/pages/Error404.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Error404() {
   return (
@@ -10,9 +10,9 @@ function Error404() {
       <main className="error404">
         <h1>404</h1>
         <p>Oups! La page que vous demandez n'existe pas.</p>
-        <NavLink to="/">
+        <Link to="/">
           <span>Retourner sur la page d’accueil</span>
-        </NavLink>
+        </Link>
       </main>
     </div>
   );
