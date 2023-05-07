@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LogementBanner from "../components/LogementBanner";
@@ -18,13 +18,13 @@ function LogementProfile() {
   const rates = [1, 2, 3, 4, 5];
   const [activeBanner, setActiveBanner] = useState(0);
 
-  const handleClickNextBanner = useCallback(() => {
+  const handleClickNextBanner = () => {
     if (activeBanner === logement.pictures.length - 1) {
       setActiveBanner(0);
     } else {
       setActiveBanner(activeBanner + 1);
     }
-  }, [activeBanner, logement.pictures.length]);
+  }
 
   const handleClickPreviousBanner = () => {
     if (activeBanner === 0) {
@@ -34,10 +34,6 @@ function LogementProfile() {
     }
   };
 
-  useEffect(() => {
-    const interval = setInterval(handleClickNextBanner, 5000);
-    return () => clearInterval(interval);
-  }, [handleClickNextBanner]);
 
   if (!logement) {
     return <Error404 />;
@@ -82,7 +78,7 @@ function LogementProfile() {
       </div>
       <div className="description-zone">
         <div className="logement-title-and-description">
-          <LogementTitle title={logement.title} location={logement.location} />{" "}
+          <LogementTitle title={logement.title} location={logement.location} />
           <div className="tag-zone">
             {logement.tags.map((e, index) => (
               <Tag key={index} tag={e} />
@@ -110,14 +106,14 @@ function LogementProfile() {
         <Collapse
           label="Description"
           description={logement.description}
-          openByDefault={true}
+          openByDefault={false}
         />
         <Collapse
           label="Équipements"
           description={logement.equipments.map((e, index) => (
             <span key={index}>{e}</span>
           ))}
-          openByDefault={true}
+          openByDefault={false}
         />
       </div>
       <Footer />

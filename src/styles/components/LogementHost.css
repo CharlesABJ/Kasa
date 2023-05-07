@@ -27,5 +27,6 @@
     .logement-host span {
         font-size: 3vw;
         width: 10vw;
+        margin: 0 20px;
     }
 }
