@@ -11,23 +11,18 @@ function Header() {
           </NavLink>
         </div>
         <ul>
-          {" "}
-          <li>
-            <NavLink
-              to="/"
-              className={(nav) => (nav.isActive ? "nav-active" : "")}
-            >
-              Accueil
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={(nav) => (nav.isActive ? "nav-active" : "")}
-            >
-              À Propos
-            </NavLink>
-          </li>
+          <NavLink
+            to="/"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            <li>Accueil</li>
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            <li>À Propos</li>
+          </NavLink>
         </ul>
       </nav>
     </header>
