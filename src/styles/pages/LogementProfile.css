@@ -76,3 +76,13 @@
         padding: 0 20px;
     }
 }
+
+@media screen and (max-width:740px) {
+
+    .collapses {
+       flex-direction: column;
+    }
+    .collapses li {
+       width: 100%;
+    }
+}
