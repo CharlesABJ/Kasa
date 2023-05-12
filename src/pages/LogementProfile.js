@@ -24,7 +24,7 @@ function LogementProfile() {
     } else {
       setActiveBanner(activeBanner + 1);
     }
-  }
+  };
 
   const handleClickPreviousBanner = () => {
     if (activeBanner === 0) {
@@ -33,7 +33,6 @@ function LogementProfile() {
       setActiveBanner(activeBanner - 1);
     }
   };
-
 
   if (!logement) {
     return <Error404 />;
@@ -102,7 +101,7 @@ function LogementProfile() {
           </div>
         </div>
       </div>
-      <div className="collapses">
+      <ul className="collapses">
         <Collapse
           label="Description"
           description={logement.description}
@@ -115,7 +114,7 @@ function LogementProfile() {
           ))}
           openByDefault={false}
         />
-      </div>
+      </ul>
       <Footer />
     </div>
   );

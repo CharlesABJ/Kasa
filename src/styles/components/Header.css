@@ -21,23 +21,23 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul a {
+header nav ul li a {
     text-decoration: none;
 }
 
-header nav ul a li {
+header nav ul li a {
     font-size: 24px;
     font-weight: 500;
-    color: #FF6060;
+    color: #ff6060;
     margin-left: 60px;
 }
 
-header nav ul a li:hover {
+header nav ul li a:hover {
     color: #ffa5a5;
     transition: 0.3s all;
 }
 
-header nav ul a.nav-active li {
+header nav ul li a.nav-active {
     text-decoration: underline;
     transition: 0.3s all;
 }
@@ -64,7 +64,7 @@ header nav ul a.nav-active li {
         justify-content: flex-end;
     }
 
-    header nav ul a li {
+    header nav ul li a {
         font-size: 12px;
         margin-left: 20px;
     }

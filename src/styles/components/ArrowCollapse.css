@@ -1,6 +1,4 @@
-.drop-down img {
-    width: 20px;
-    height: 10px;
+.drop-down i {
     transition: 0.3s all;
 }
 
@@ -9,10 +7,3 @@
     transition: 0.3s all;
 }
 
-
-@media screen and (max-width:1000px) {
-    .drop-down img {
-        width: 3vw;
-        height: 2vw;
-    }
-}

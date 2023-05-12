@@ -13,9 +13,11 @@ function Collapse(props) {
         <p onClick={handleClick} className="drop-down">
           {props.label}
           <ArrowCollapse
-            className={isClicked ? "drop" : null}
-            src="../../assets/arrow-drop.png"
-            alt={isClicked ? "élément ouvert" : "élément fermé"}
+            className={
+              isClicked
+                ? "fa-solid fa-chevron-up drop"
+                : "fa-solid fa-chevron-up"
+            }
           />
         </p>
         <p className={`description ${isClicked ? "" : "closed"}`}>
