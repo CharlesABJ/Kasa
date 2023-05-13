@@ -2,8 +2,7 @@
     transition: 0.3s all;
 }
 
-.drop-down .drop {
+.drop-down i.drop {
     transform: rotate(180deg);
     transition: 0.3s all;
 }
-
